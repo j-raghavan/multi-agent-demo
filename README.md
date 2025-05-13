@@ -12,6 +12,10 @@ Human Query -> Planner -> [Worker Agents] -> Critique -> Judge -> Actionable Rec
 
 ### Workflow Diagram
 
+#### Call Flow
+![Call Flow](./output/flow.png)
+*Call Flow*
+
 ```mermaid
 flowchart LR
     Human[Human Query] --> Planner[Planner Agent]
