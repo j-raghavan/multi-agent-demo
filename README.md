@@ -10,6 +10,36 @@ This system implements a sophisticated multi-agent workflow for security log ana
 Human Query -> Planner -> [Worker Agents] -> Critique -> Judge -> Actionable Recommendations
 ```
 
+### Workflow Diagram
+
+```mermaid
+flowchart LR
+    Human[Human Query] --> Planner[Planner Agent]
+    Planner --> |Assigns Tasks| Workers[Worker Agents]
+    Workers --> |Parallel Analysis| Critique[Critique Agent]
+    Critique --> |Voting Consensus| Judge[Judge Agent]
+    Judge --> |Final Assessment| Action[Actionable Recommendations]
+    
+    subgraph Workers
+        direction LR
+        W1[Initial Access] --- W2[Execution] --- W3[Persistence] --- W4[Privilege Escalation] --- W5[Defense Evasion]
+    end
+    
+    classDef human fill:#f9f,stroke:#333,stroke-width:2px
+    classDef planner fill:#bbf,stroke:#333,stroke-width:2px
+    classDef workers fill:#dfd,stroke:#333,stroke-width:2px
+    classDef critique fill:#fdb,stroke:#333,stroke-width:2px
+    classDef judge fill:#fbb,stroke:#333,stroke-width:2px
+    classDef action fill:#bfb,stroke:#333,stroke-width:2px
+    
+    class Human human
+    class Planner planner
+    class Workers workers
+    class Critique critique
+    class Judge judge
+    class Action action
+```
+
 ### Key Components
 
 - **Planner**: Analyzes security investigation requests and creates analysis plans
@@ -126,6 +156,21 @@ Key dependencies managed by Poetry:
 - `python-dotenv`: Environment variable management
 
 See `pyproject.toml` for complete dependency list.
+
+
+## Sample Output
+
+### Attack Path Visualization
+![Attack Path Graph](./output/attack_graph.png)
+*Attack path visualization showing the sequence of events and their relationships*
+
+### Confidence Level Distribution
+![Confidence Levels](./output/confidence_levels.png)
+*Distribution of findings by confidence level after voting-based consensus*
+
+### Specialist Contributions
+![Specialist Contributions](./output/specialist_contributions.png)
+*Relative contributions of each specialist to the investigation*
 
 ## Worker Specialties
 
