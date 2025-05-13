@@ -1,0 +1,2 @@
+{"timestamp": "2024-03-15T12:15:30Z", "event": {"type": "NetworkConnectionIP4"}, "process": {"name": "powershell.exe", "pid": 3456}, "network": {"direction": "outbound", "protocol": "tcp", "local_ip": "10.1.1.5", "local_port": 54321, "remote_ip": "45.67.89.123", "remote_port": 443}}
+{"timestamp": "2024-03-15T12:15:35Z", "event": {"type": "FileWritten"}, "file": {"path": "C:\\temp\\data.zip", "size": 1024000}, "process": {"name": "powershell.exe", "pid": 3456}}

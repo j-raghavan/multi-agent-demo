@@ -1,0 +1,2 @@
+{"timestamp": "2024-03-15T10:34:56Z", "event": {"type": "ProcessRollup2"}, "process": {"name": "cmd.exe", "command_line": "cmd.exe /c net use \\\\10.1.1.12\\admin$ /user:domain\\admin password123", "pid": 1234}, "user": {"username": "jsmith"}}
+{"timestamp": "2024-03-15T10:35:10Z", "event": {"type": "NetworkConnectionIP4"}, "process": {"name": "cmd.exe", "pid": 1234}, "network": {"direction": "outbound", "protocol": "tcp", "local_ip": "10.1.1.5", "local_port": 49321, "remote_ip": "10.1.1.12", "remote_port": 445}}
