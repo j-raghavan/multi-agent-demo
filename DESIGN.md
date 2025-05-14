@@ -1,4 +1,4 @@
-# CrowdStrike Log Analysis System Implementation
+# Security Log Analysis System Implementation
 
 ## Overview
 
